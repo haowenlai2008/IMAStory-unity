@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="24" height="10" tilewidth="70" tileheight="70" nextobjectid="1">
+ <tileset firstgid="1" name="Village_Block" tilewidth="70" tileheight="70" tilecount="150" columns="15">
+  <image source="Village_Block.png" width="1050" height="700"/>
+  <tile id="66">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="74" height="71"/>
+   </objectgroup>
+  </tile>
+  <tile id="67">
+   <objectgroup draworder="index">
+    <object id="1" x="1" y="-1" width="67" height="69"/>
+   </objectgroup>
+  </tile>
+  <tile id="68">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="-1" width="70" height="69"/>
+   </objectgroup>
+  </tile>
+  <tile id="69">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="-1" width="70" height="69"/>
+   </objectgroup>
+  </tile>
+  <tile id="70">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="70" height="71"/>
+   </objectgroup>
+  </tile>
+  <tile id="71">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="0" width="70" height="69"/>
+    <object id="2" x="0" y="0" width="68" height="68"/>
+   </objectgroup>
+  </tile>
+  <tile id="72">
+   <objectgroup draworder="index">
+    <object id="1" x="-1" y="-1" width="70" height="69"/>
+   </objectgroup>
+  </tile>
+  <tile id="73">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="71" height="71"/>
+   </objectgroup>
+  </tile>
+  <tile id="74">
+   <objectgroup draworder="index">
+    <object id="3" x="-2" y="-2" width="73" height="73"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="BackGround" width="24" height="10">
+  <data encoding="base64" compression="zlib">
+   eJytyjdPQmEAheG7ISq6WVDc7LrZYQNUsOtod7Q72h3t/mWf+ctNbki+4UnOSd5ckiRt5GkPdgedFOiim1yLTQ+99NEf7CIDDFJiKKXPaoYZYZSxYI8zwSRTTKf0Wc0Ms8wxH+wFFlmiTCWlz2qq1KizHOwVVmnQZC2lz2rW2WCTrQh/mx122WOfAw45ivCPOeGUM8654JKrCP+aG265454HHnmK8J954ZU33vngk68I/5sffvnjH7UORaI=
+  </data>
+ </layer>
+</map>

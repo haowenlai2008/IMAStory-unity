@@ -1,0 +1,111 @@
+
+KnightAnimation_tex.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Lhs_us
+  rotate: false
+  xy: 214 ,291
+  size: 21 ,54
+  orig: 30 ,56
+  offset: 6 ,1
+  index: -1
+Lhs_ds
+  rotate: false
+  xy: 97 ,271
+  size: 39 ,37
+  orig: 41 ,48
+  offset: 2 ,8
+  index: -1
+shield
+  rotate: false
+  xy: 174 ,197
+  size: 38 ,73
+  orig: 53 ,74
+  offset: 8 ,1
+  index: -1
+Lfs_us
+  rotate: false
+  xy: 214 ,197
+  size: 32 ,37
+  orig: 40 ,41
+  offset: 7 ,1
+  index: -1
+Lfs_ds
+  rotate: false
+  xy: 214 ,236
+  size: 22 ,53
+  orig: 34 ,54
+  offset: 6 ,1
+  index: -1
+Body
+  rotate: false
+  xy: 174 ,112
+  size: 60 ,83
+  orig: 78 ,106
+  offset: 9 ,15
+  index: -1
+Rfs_us
+  rotate: false
+  xy: 229 ,61
+  size: 22 ,39
+  orig: 32 ,54
+  offset: 7 ,10
+  index: -1
+Rfs_ds
+  rotate: false
+  xy: 141 ,218
+  size: 28 ,53
+  orig: 30 ,55
+  offset: 2 ,0
+  index: -1
+head
+  rotate: false
+  xy: 136 ,1
+  size: 91 ,109
+  orig: 112 ,143
+  offset: 15 ,19
+  index: -1
+helmet
+  rotate: false
+  xy: 1 ,1
+  size: 133 ,143
+  orig: 159 ,158
+  offset: 15 ,13
+  index: -1
+scarf
+  rotate: false
+  xy: 1 ,218
+  size: 94 ,92
+  orig: 108 ,97
+  offset: 10 ,5
+  index: -1
+sword
+  rotate: false
+  xy: 1 ,146
+  size: 171 ,70
+  orig: 172 ,90
+  offset: 1 ,12
+  index: -1
+Rhs_us
+  rotate: false
+  xy: 97 ,218
+  size: 42 ,51
+  orig: 55 ,56
+  offset: 7 ,3
+  index: -1
+Rhs_us_1
+  rotate: false
+  xy: 229 ,102
+  size: 1 ,1
+  orig: 1 ,1
+  offset: 0,0
+  index: -1
+Rhs_ds
+  rotate: false
+  xy: 229 ,1
+  size: 26 ,58
+  orig: 31 ,60
+  offset: 5 ,1
+  index: -1
