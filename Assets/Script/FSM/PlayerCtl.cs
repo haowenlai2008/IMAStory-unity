@@ -13,7 +13,8 @@ public enum StateEnum
     Attacking = 2,
     Defending = 3
 }
-public class PlayerCtl : MonoBehaviour {
+public class PlayerCtl : MonoBehaviour
+{
     // Use this for initialization
     public float MoveSpeed = 5.0f;
     public UnityArmatureComponent unityArmature;
@@ -30,7 +31,8 @@ public class PlayerCtl : MonoBehaviour {
     public BarBox ExpBox;
     bool isFlip;
 
-    void Awake() {    
+    void Awake()
+    {
         isFlip = false;
         charcter_state[0] = new IdelState(gameObject);//默认状态
         charcter_state[1] = new WalkState(gameObject);//行走状态
@@ -50,7 +52,8 @@ public class PlayerCtl : MonoBehaviour {
 
     }
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         WalkCtl();
     }
     void Flip()
@@ -63,12 +66,13 @@ public class PlayerCtl : MonoBehaviour {
     void WalkCtl()
     {
         Vector3 vec = Vector3.zero;
-        Rigidbody rb = GetComponent<Rigidbody>();
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (Input.anyKey)
         {
-
+            //Debug.Log(GetCurrentState());
             if (GetCurrentState() == charcter_state[1])
             {
+
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
                     vec.y = 1;
@@ -126,7 +130,7 @@ public class PlayerCtl : MonoBehaviour {
         }
         CurrentState = charcter_state[(int)_index];
     }
-    
+
     public State GetCurrentState()
     {
         return CurrentState;
@@ -162,12 +166,10 @@ public class PlayerCtl : MonoBehaviour {
         string input = json.ReadToEnd();
         Dictionary<string, List<Dictionary<string, object>>> jsonObject = JsonMapper.ToObject<Dictionary<string, List<Dictionary<string, object>>>>(input);
         MaxHealth = 1000 + 100 * (int.Parse(jsonObject["Archice"][0]["Level"].ToString()) - 1);
-        MaxExp = 500 + 100 * (int.Parse(jsonObject["Archice"][0]["Level"].ToString()) -1);
+        MaxExp = 500 + 100 * (int.Parse(jsonObject["Archice"][0]["Level"].ToString()) - 1);
         Health = int.Parse(jsonObject["Archice"][0]["HP"].ToString());
         Exp = int.Parse(jsonObject["Archice"][0]["EXP"].ToString());
         ATK = 100 + 5 * (int.Parse(jsonObject["Archice"][0]["Level"].ToString()) - 1);
-        Armature sword = UnityFactory.factory.BuildArmature("Assets/Texture/Knight/sword_01.png");
-        unityArmature.GetComponent<Armature>().GetSlot("sword").childArmature = sword;
     }
     //UI初始化
     private void UiInit()

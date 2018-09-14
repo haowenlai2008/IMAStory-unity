@@ -29,7 +29,6 @@ public class WalkState : State
         chargeTime = 0.0f;
         MaxTime = 0.88f;
         playerCtl.Walk();//播放动画
-        Debug.Log("Move");
     }
 
     // Update is called once per frame

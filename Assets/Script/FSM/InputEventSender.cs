@@ -12,7 +12,6 @@ public class InputEventSender : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         playerCtl = GetComponent<PlayerCtl>();
-        Debug.Log(playerCtl);
         characterStateActVer = new State(gameObject);
         Debug.Log(playerCtl.charcter_state[0]);
         foreach (State state in playerCtl.charcter_state)

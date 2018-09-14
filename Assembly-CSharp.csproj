@@ -115,10 +115,10 @@
      <Compile Include="Assets\DragonBones\Scripts\unity\UnityTextureAtlasData.cs" />
      <Compile Include="Assets\DragonBones\Scripts\unity\UnityUGUIDisplay.cs" />
      <Compile Include="Assets\Script\BarBox.cs" />
+     <Compile Include="Assets\Script\CameraFollow.cs" />
      <Compile Include="Assets\Script\CharacterHealth.cs" />
      <Compile Include="Assets\Script\DialogCtl.cs" />
      <Compile Include="Assets\Script\FSM\AttackState.cs" />
-     <Compile Include="Assets\Script\FSM\CameraFollow.cs" />
      <Compile Include="Assets\Script\FSM\DefendState.cs" />
      <Compile Include="Assets\Script\FSM\IdelState.cs" />
      <Compile Include="Assets\Script\FSM\InputEventArgs.cs" />
@@ -126,7 +126,9 @@
      <Compile Include="Assets\Script\FSM\PlayerCtl.cs" />
      <Compile Include="Assets\Script\FSM\State.cs" />
      <Compile Include="Assets\Script\FSM\WalkState.cs" />
+     <Compile Include="Assets\Script\GameControll.cs" />
      <Compile Include="Assets\Script\MapManager.cs" />
+     <Compile Include="Assets\Script\MapSide.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
@@ -155,7 +157,8 @@
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
      <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_Grab.shader" />
-     <None Include="Assets\Resource\KnightAnimation_spine\KnightAnimation_ske.atlas.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\Egg.tiled2unity.xml" />
+     <None Include="Assets\Resources\Character\Resources\KnightAnimation_spine\KnightAnimation_ske.atlas.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\DragonBones\Resources\Shaders\DB_BlendMode_UIGrab.shader" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />

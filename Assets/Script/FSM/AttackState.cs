@@ -18,7 +18,6 @@ public class AttackState : State
         chargeTime = 0.0f;
         MaxTime = 0.63f;
         playerCtl.Attack();//播放动画
-        Debug.Log("Attack");
     }
 
     // Update is called once per frame
