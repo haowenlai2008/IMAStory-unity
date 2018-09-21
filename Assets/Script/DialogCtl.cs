@@ -50,7 +50,8 @@ public class DialogCtl : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-
+                if (sentenceUnit.sentence.Length != count)
+                    text.text = sentenceUnit.sentence;
                 if (sentenceQueue.Count != 0)
                     sentenceUnit = sentenceQueue.Dequeue();
                 if (sentenceQueue.Count == 0)
@@ -71,6 +72,10 @@ public class DialogCtl : MonoBehaviour {
                 pushSentence("拜托你很弱欸");
                 pushSentence("你现在知道谁是老大了吗");
                 showDialogBox();
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                GameControll.SaveData();
             }
         }
 

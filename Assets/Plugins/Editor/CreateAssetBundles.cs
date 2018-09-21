@@ -6,22 +6,13 @@ using System.IO;
 using Object = UnityEngine.Object;
 public class CreateAssetBundles {
     static string AssetbundlePath = "Assets" + Path.DirectorySeparatorChar + "assetbundles" + Path.DirectorySeparatorChar;
-    [MenuItem("Character Generator/Create Assetbundles")]
-    static void Execute()
+    [MenuItem("Assets/Build AssetBundle")]
+    static void BuildAssetsBundles()
     {
-        bool createdBundle = false;
-        foreach (Object o in Selection.GetFiltered(typeof (Object), SelectionMode.DeepAssets))
+        if (Directory.Exists(AssetbundlePath) == false)
         {
-            if (!(o is GameObject)) continue;
-            if (o.name.Contains("@")) continue;
-            if (!AssetDatabase.GetAssetPath(o).Contains("/characters/"))
-                continue;
-            createdBundle = true;
+            Directory.CreateDirectory(AssetbundlePath);
         }
-        if (!createdBundle)
-        {
-            EditorUtility.DisplayDialog("Character Generator", "未生成Assetbundle.请选择Project视图中的characters文件夹来生成所有角色或者选择单个子目录生成选定角色", "OK");
-            return;
-        }
+        BuildPipeline.BuildAssetBundles(AssetbundlePath, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
     }
 }

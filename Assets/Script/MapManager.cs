@@ -8,9 +8,9 @@ using MiniJSON;
 using LitJson;
 public enum Command
 {
+    Default,
     ToLeft,
-    ToRight,
-    Default
+    ToRight
 }
 public class MapManager : MonoBehaviour {
     public GameObject mapPrefab;
@@ -18,7 +18,7 @@ public class MapManager : MonoBehaviour {
     public MeshRenderer mapBlock;
     public static string[] mapName = new string[3];
     public Command command { get; set;}
-    private int currentMapIndex;
+    static public int CurrentMapIndex { get; set; }
 	// Use this for initialization
 	void Start () {
         ReadMapData();
@@ -38,20 +38,27 @@ public class MapManager : MonoBehaviour {
         do
         {
             string FileName = "Assets/Data/MapData.json";
-            StreamReader json = File.OpenText(FileName);
-            string input = json.ReadToEnd();
+            StreamReader reader = File.OpenText(FileName);
+            string input = reader.ReadToEnd();
             Dictionary<string, List<Dictionary<string, object>>> jsonObject = JsonMapper.ToObject<Dictionary<string, List<Dictionary<string, object>>>>(input);
             for (int i = 0; i < mapName.Length; i++)
+            {
                 mapName[i] = jsonObject["map"][i]["name"].ToString();
+                Debug.Log(mapName[i]);
+            }
+            reader.Close();
+            reader.Dispose();
         } while (false);
 
         do
         {
             string FileName = "Assets/Data/Archice.json";
-            StreamReader json = File.OpenText(FileName);
-            string input = json.ReadToEnd();
+            StreamReader reader = File.OpenText(FileName);
+            string input = reader.ReadToEnd();
             Dictionary<string, List<Dictionary<string, object>>> jsonObject = JsonMapper.ToObject<Dictionary<string, List<Dictionary<string, object>>>>(input);
-            currentMapIndex = int.Parse(jsonObject["Archice"][0]["MapID"].ToString());
+            CurrentMapIndex = int.Parse(jsonObject["Archice"][0]["MapID"].ToString());
+            reader.Close();
+            reader.Dispose();
         } while (false);
     }
     public void showMap()
@@ -61,8 +68,14 @@ public class MapManager : MonoBehaviour {
             Destroy(map);
             map = null;
         }
+        Debug.Log("现在的地图是:");
+        Debug.Log(CurrentMapIndex);
         mapPrefab = null;
-        mapPrefab = (GameObject)Resources.Load("map/Prefabs/" + mapName[currentMapIndex]);
+        //从Resources文件夹加载Prefabs
+        //mapPrefab = (GameObject)Resources.Load("map/Prefabs/" + mapName[CurrentMapIndex]);
+        
+        //从assetbundles文件夹加载Prefabs
+        mapPrefab = AssetBundleLoader.LoadAssetBundle("Assets/assetbundles/Map._ab", mapName[CurrentMapIndex]);
         map = Instantiate(mapPrefab);
         //mapBlock = GameObject.FindGameObjectWithTag("MapBlock").GetComponent<MeshRenderer>();
         mapBlock = map.GetComponentInChildren<MeshRenderer>();
@@ -95,19 +108,19 @@ public class MapManager : MonoBehaviour {
     }
     public void ToTheLeft()
     {
-        if (currentMapIndex - 1 < 0)
+        if (CurrentMapIndex - 1 < 0)
             return;
         else
-            currentMapIndex -= 1;
+            CurrentMapIndex -= 1;
         showMap();
         ResetCharaterPos(true);
     }
     public void ToTheRight()
     {
-        if (currentMapIndex + 1 >= mapName.Length)
+        if (CurrentMapIndex + 1 >= mapName.Length)
             return;
         else
-            currentMapIndex += 1;
+            CurrentMapIndex += 1;
         showMap();
         ResetCharaterPos(false);
     }

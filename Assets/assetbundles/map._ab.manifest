@@ -1,0 +1,51 @@
+ManifestFileVersion: 0
+CRC: 2499794007
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 790fe2c9719a5b70fa7f760be2ceb9ca
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 055a19afe76889a639c0ce7dd68354f6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 60
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a425cb3219d4ebb4796b8e4968d45732, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c0619e460a775cc458d37cb4a214a189, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39ee2f8a5034ace40a1c8c77662aa64b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 36f478cbe2fdbeb43a1a2ec45e99ca69, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b4529e6d50e7df746bb0157362724759, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Map/Prefabs/Egg.prefab
+- Assets/Resources/Map/Prefabs/rightSide.prefab
+- Assets/Resources/Map/Prefabs/leftSide.prefab
+- Assets/Resources/Map/Prefabs/Villae.prefab
+Dependencies: []

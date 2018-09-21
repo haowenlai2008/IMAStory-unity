@@ -38,10 +38,6 @@ public class PlayerCtl : MonoBehaviour
         charcter_state[1] = new WalkState(gameObject);//行走状态
         charcter_state[2] = new AttackState(gameObject);//攻击状态
         charcter_state[3] = new DefendState(gameObject);//防御状态
-        Debug.Log(charcter_state[0]);
-        Debug.Log(charcter_state[1]);
-        Debug.Log(charcter_state[2]);
-        Debug.Log(charcter_state[3]);
         CurrentState = new State(gameObject);
         CurrentState = charcter_state[0];
         DataInit();
@@ -139,10 +135,11 @@ public class PlayerCtl : MonoBehaviour
     public void ReadData()
     {
         string FileName = "Assets/Data/Archice.json";
-        StreamReader json = File.OpenText(FileName);
-        string input = json.ReadToEnd();
+        StreamReader reader = File.OpenText(FileName);
+        string input = reader.ReadToEnd();
         Dictionary<string, List<Dictionary<string, object>>> jsonObject = JsonMapper.ToObject<Dictionary<string, List<Dictionary<string, object>>>>(input);
-        Debug.Log(jsonObject["Archice"][0]["EXP"]);
+        reader.Close();
+        reader.Dispose();
     }
     //治疗
     public void Cure(int cure)

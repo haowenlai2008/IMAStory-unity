@@ -26,10 +26,14 @@ public class MapSide : MonoBehaviour {
         {
             Debug.Log("Hit");
             if (type == SideType.Left)
-                mapManager.command = Command.ToLeft; 
+            {
+                mapManager.command = Command.ToLeft;
+                Debug.Log("啊啊啊啊啊阿瓦");
+            }   
             else
+            {
                 mapManager.command = Command.ToRight;
-
+            }
         }
     }
 }
