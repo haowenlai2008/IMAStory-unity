@@ -73,11 +73,13 @@ public class MapManager : MonoBehaviour {
         mapPrefab = null;
         //从Resources文件夹加载Prefabs
         //mapPrefab = (GameObject)Resources.Load("map/Prefabs/" + mapName[CurrentMapIndex]);
-        
+
         //从assetbundles文件夹加载Prefabs
         mapPrefab = AssetBundleLoader.LoadAssetBundle("Assets/assetbundles/Map._ab", mapName[CurrentMapIndex]);
+
         map = Instantiate(mapPrefab);
-        //mapBlock = GameObject.FindGameObjectWithTag("MapBlock").GetComponent<MeshRenderer>();
+
+        mapBlock = GameObject.FindGameObjectWithTag("MapBlock").GetComponent<MeshRenderer>();
         mapBlock = map.GetComponentInChildren<MeshRenderer>();
         Debug.Log(mapBlock.bounds.size);
         map.transform.position = new Vector3(-(mapBlock.bounds.size.x / 2), mapBlock.bounds.size.y / 2, 0);
